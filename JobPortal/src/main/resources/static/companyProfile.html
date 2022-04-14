@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Company Registration</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+#requirements {
+	margin-top: 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #fff;
+	background-color: #3F729B;
+}
+#team {
+	margin-top: 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	color: #fff;
+	background-color: #2E2E2E;
+}
+.jumbotron {
+	margin-bottom: 10px;
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+}
+/* Set a style for all buttons */
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+}
+button:hover {
+	opacity: 0.8;
+}
+/* Extra styles for the cancel button */
+.cancelbtn {
+	width: auto;
+	padding: 10px 18px;
+	background-color: #f44336;
+}
+/* Center the image and position the close button */
+.imgcontainer {
+	text-align: center;
+	margin: 24px 0 12px 0;
+	position: relative;
+}
+img.avatar {
+	width: 10%;
+	border-radius: 50%;
+}
+.container {
+	padding: 16px;
+}
+span.psw {
+	float: right;
+	padding-top: 16px;
+}
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	padding-top: 60px;
+}
+/* Modal Content/Box */
+.modal-content {
+	background-color: #fefefe;
+	margin: 5% auto 15% auto;
+	/* 5% from the top, 15% from the bottom and centered */
+	border: 1px solid #888;
+	width: 40%; /* Could be more or less, depending on screen size */
+}
+/* The Close Button (x) */
+.close {
+	position: absolute;
+	right: 25px;
+	top: 0;
+	color: #000;
+	font-size: 35px;
+	font-weight: bold;
+}
+.close:hover, .close:focus {
+	color: red;
+	cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+	-webkit-animation: animatezoom 0.6s;
+	animation: animatezoom 0.6s
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+	span.psw {
+		display: block;
+		float: none;
+	}
+	.cancelbtn {
+		width: 100%;
+	}
+}
+.row.vertical-divider {
+	overflow: hidden;
+}
+.row.vertical-divider>div[class^="col-"] {
+	text-align: center;
+	padding-top: 5%;
+	/*padding-bottom: 100px;*/
+	margin-top: 30px;
+	/*margin-bottom: -100px;*/
+	border-left: 3px solid #689f38;
+	border-right: 3px solid #689f38;
+}
+.row1 {
+	overflow: hidden;
+}
+.row2 {
+	margin-bottom: -99999px;
+	padding-bottom: 99999px;
+}
+body {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/Company.html">Company</a>
+				
+			</div>
+		</div>
+	</nav>
+<br>
+<div class="container-fluid">
+<div class="container">
+			<h1 class="well">
+	           Company Details
+			</h1>
+			<div class="col-lg-12 well">
+				<div class="row">
+<form action="/update/company">
+
+<div class="row mb-3">
+    <label  class="col-sm-2 col-form-label">Company Id</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputcompanyname" name="id" placeholder="Enter Company id">
+    </div>
+    
+  </div>
+  <div class="row mb-3">
+    <label  class="col-sm-2 col-form-label">Company Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputcompanyname" name="companyName" placeholder="Enter Company Name">
+    </div>
+    
+  </div>
+  <br>
+  <div class="row mb-3">
+    <label  class="col-sm-2 col-form-label">Headquarter</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputHeadquarters" name="headquarters" placeholder="Enter Headquarters">
+    </div>
+    
+  </div>
+  <br>
+ <div class="row mb-3">
+    <label class="col-sm-2 col-form-label">Company Username</label>
+    <div class="col-sm-10">
+      <input type="email" class="form-control" id="inputcompanyuser" name="companyUser" placeholder="Company Username">
+    </div>
+  </div>
+  <br>
+ <div class="row mb-3">
+    <label  class="col-sm-2 col-form-label">Password</label>
+    <div class="col-sm-10">
+      <input type="password" class="form-control" id="inputcompanypass" name="password" placeholder="Password">
+    </div>
+  </div>
+<br>
+<div class="row mb-3">
+    <label  class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="inputdescription" name="description" placeholder="Description">
+    </div>
+  </div>
+
+
+  
+  <button type="submit" class="btn btn-primary">Update</button>
+  
+</form>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
